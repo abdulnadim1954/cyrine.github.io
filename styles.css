@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.name {
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    animation: move 5s linear infinite;
+    z-index: 0;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, -50px);
+    }
+    50% {
+        transform: translate(-100px, 50px);
+    }
+    75% {
+        transform: translate(-50px, -100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
